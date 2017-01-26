@@ -27,5 +27,18 @@ public class MyStackTest {
 		assertEquals(Integer.valueOf(6), myStack.pop());
 	}
 	
+	@Test
+	public void stackWidMinTest() throws EmptyStackException{
+		StackWithMin myStackMin=new StackWithMin();
+		myStackMin.push(5);
+		myStackMin.push(6);
+		myStackMin.push(3);
+		myStackMin.push(8);
+		assertEquals(3,myStackMin.min());
+		myStackMin.pop();
+		myStackMin.pop();
+		assertEquals(5,myStackMin.min());
+	}
+	
 	
 }
