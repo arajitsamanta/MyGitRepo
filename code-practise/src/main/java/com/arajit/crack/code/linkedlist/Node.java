@@ -639,8 +639,17 @@ public class Node<T> {
 				break;
 			}
 		}
+		
+		if(fast==null || fast.next==null){
+			return null;
+		}		
+		slow=head;
+		while(slow!=fast){
+			slow=slow.next;
+			fast=fast.next;
+		}
 		System.out.println("Collision point-->"+slow.data + fast.data);
-		return null;
+		return fast;
 	}
 	
 	public Node<T> getLast(Node<T> head){
