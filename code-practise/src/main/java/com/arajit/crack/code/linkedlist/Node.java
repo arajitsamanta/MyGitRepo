@@ -606,14 +606,40 @@ public class Node<T> {
 	
 	public void createCircularList(Node<T> head, int position){
 		Node<T> circularPoint=getKthNode(head,position);
-		System.out.println(circularPoint.data);
 		Node<T> last=getLast(head);
-		System.out.println(last.data);
 		last.next=circularPoint;		
 	}
 	
+	/**
+	 * @param head
+	 * @return Node<T>
+	 * 
+	 * Problem: 
+	 * Loop Detection: Given a circular linked list, implement an algorithm that returns the node at the  beginning of the loop.
+	 * Definition
+	 * Circular linked list: A (corrupt) linked list in which a node's next pointer points to an earlier node, so as to make a loop in the linked list.
+	 * EXAMPLE	
+	 * Input: A - > B - > C - > D - > E - > C [the same C as earlier]
+	 * Output: C
+	 * 
+	 * Solution:
+	 * 1. Create two pointers, FastPointer and SlowPointer.
+	 * 2. Move FastPointer at a rate of 2 steps and SlowPointer at a rate of 1 step.
+	 * 3. When they collide, move SlowPointer to LinkedListHead. Keep FastPointer where it is.
+	 * 4. Move SlowPointer and FastPointer at a rate of one step. Return the new collision point.
+	 */
 	public Node<T> findCircularPoint(Node<T> head){
-		
+		Node<T>  slow = head;
+		Node<T>  fast = head;
+		while(fast!=null && fast.next!=null){
+			slow=slow.next;
+			fast=fast.next.next;
+			if(slow==fast){
+				//Collision
+				break;
+			}
+		}
+		System.out.println("Collision point-->"+slow.data + fast.data);
 		return null;
 	}
 	

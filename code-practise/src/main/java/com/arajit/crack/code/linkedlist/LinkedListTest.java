@@ -71,7 +71,7 @@ public class LinkedListTest {
 		
 		System.out.println("\nLinked list is palindrome -> "+linkedList.isEqual(linkedList, reverseList));*/
 		
-		int[] list1={1,2,3,2,1};
+		int[] list1={1,2,3,4,5};
 		Node<Integer> linkedList1=createLinkedlist(list1);
 		//System.out.println("\nLinked list is palindrome -> "+linkedList.isPalindromeRecursion(linkedList));
 		
@@ -81,8 +81,9 @@ public class LinkedListTest {
 		Node<Integer> intersectionPoint=linkedList1.findIntersection(linkedList1, linkedList2);
 		//System.out.println("\n Intersection is palindrome -> " );
 		//intersectionPoint.display(intersectionPoint);*/
-		linkedList1.createCircularList(linkedList1, 3);
-		linkedList1.display(linkedList1);
+		linkedList1.createCircularList(linkedList1, 2);
+		//linkedList1.display(linkedList1);
+		linkedList1.findCircularPoint(linkedList1);
 	
 	}
 	
