@@ -36,4 +36,13 @@ public class MyStack<T> {
 	public boolean isEmpty() {
 		return top == null;
 	}
+	
+	public int size(){
+		int len=0;
+		while(top!=null){
+			len++;
+			top=top.next;
+		}
+		return len;
+	}
 }

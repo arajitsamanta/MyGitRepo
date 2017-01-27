@@ -5,6 +5,10 @@ package com.arajit.crack.code.stackqueues;
 
 /**
  * @author as47775
+ * 
+ * How would you design a stack, which in addition to push and pop it will have min() method which will always return minimum element in stack.
+ * 
+ * Note that push/pop/min need to work O(1) constant time.
  *
  */
 public class StackWithMin extends MyStack<Integer> {

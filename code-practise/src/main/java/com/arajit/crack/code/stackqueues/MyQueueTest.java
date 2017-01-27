@@ -25,4 +25,23 @@ public class MyQueueTest {
 		assertTrue(myQueue.isEmpty());
 		
 	}
+	
+	
+	@Test
+	public void queueUsingStackTest() throws EmptyStackException, NoSuchElementException{
+		
+		QueueUsingStack myQueue=new QueueUsingStack();
+		myQueue.enqueue(2);
+		myQueue.enqueue(3);
+		myQueue.enqueue(4);
+		myQueue.enqueue(5);
+		myQueue.enqueue(6);
+		//assertFalse(myQueue.isEmpty());
+		assertEquals(Integer.valueOf(2), Integer.valueOf(myQueue.dequeue()));
+		assertEquals(Integer.valueOf(3), Integer.valueOf(myQueue.dequeue()));
+		assertEquals(Integer.valueOf(4), Integer.valueOf(myQueue.dequeue()));		
+		assertEquals(Integer.valueOf(5), Integer.valueOf(myQueue.dequeue()));
+		//assertTrue(myQueue.isEmpty());
+		
+	}
 }
