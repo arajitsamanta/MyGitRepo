@@ -128,7 +128,7 @@ class StackLocal<T> {
 		Node t = top;
 		top = top.below;
 		size--;
-		return (int) t.value;
+		return (Integer) t.value;
 	}
 
 	public boolean isEmpty() {
@@ -141,6 +141,6 @@ class StackLocal<T> {
 		if (bottom != null)
 			bottom.below = null;
 		size--;
-		return (int) b.value;
+		return (Integer) b.value;
 	}
 }

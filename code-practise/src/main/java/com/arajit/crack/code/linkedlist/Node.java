@@ -438,7 +438,7 @@ public class Node<T> {
 		
 		while(slow!=null){
 			int top=stack.pop().intValue();
-			if(top!=(int)(Object)slow.data){
+			if(top!=(Integer)(Object)slow.data){
 				return false;
 			}
 			slow=slow.next;

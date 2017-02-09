@@ -39,7 +39,7 @@ public class AmazonSDE {
             return 0;
         }
         
-        Stack<Character> halfBraces = new Stack<>();
+        Stack<Character> halfBraces = new Stack<Character>();
 
         for(int i = 0; i < str.length(); i++){
             if(bracketPairs.containsKey(str.charAt(i))){
