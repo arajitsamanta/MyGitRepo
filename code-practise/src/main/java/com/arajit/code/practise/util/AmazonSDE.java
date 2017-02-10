@@ -3,7 +3,6 @@ package com.arajit.code.practise.util;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-import java.lang.System;
 
 public class AmazonSDE {
 	
@@ -23,6 +22,7 @@ public class AmazonSDE {
         
         int[][] maze2={{0,0,0},{0,1,0},{0,0,0}};
         findMinNumSteps(maze2,3,3,2,1); */
+			
     }
 
     private static int isBalanced(String str) {
@@ -75,4 +75,5 @@ public class AmazonSDE {
  		return countStep;
  	}
  	// METHOD SIGNATURE ENDS
+ 
 }
