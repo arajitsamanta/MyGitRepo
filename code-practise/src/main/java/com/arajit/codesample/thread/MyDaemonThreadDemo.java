@@ -11,7 +11,7 @@ public class MyDaemonThreadDemo {
 		public void run() {
 			while (true) {
 				try {
-					Thread.sleep(5000);
+					Thread.sleep(1);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -23,8 +23,7 @@ public class MyDaemonThreadDemo {
 		Thread thread = new MyDaemonThread();
         thread.start();
         System.out.println(thread.isAlive());
-        thread.join();
-        System.out.println(thread.isAlive());
+
 	}
 
 }
