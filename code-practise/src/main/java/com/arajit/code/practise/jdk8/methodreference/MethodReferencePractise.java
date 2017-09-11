@@ -26,11 +26,11 @@ public class MethodReferencePractise {
 		System.out.println("****** JDK8 method reference test ******");
 		
 		/**
-		 * Reference to static method – Class::staticMethodName
+		 * Reference to static method Class::staticMethodName
 		 */
 		List<Integer> integers = Arrays.asList(1,12,433,5);		
 		Optional<Integer> max = integers.stream().reduce( Math::max );
-		System.out.println("-- Reference to static method – Class::staticMethodName");
+		System.out.println("-- Reference to static method Class::staticMethodName");
 		max.ifPresent(value -> System.out.println(value)); 
 		
 		// Referring static method
@@ -59,9 +59,9 @@ public class MethodReferencePractise {
 		System.out.println(result3);  
 		
 		/**
-		 * Reference to instance method from instance – ClassInstance::instanceMethodName
+		 * Reference to instance method from instance ClassInstance::instanceMethodName
 		 */
-		System.out.println("-- Reference to static method – ClassInstance::staticMethodName");
+		System.out.println("-- Reference to static method ClassInstance::staticMethodName");
 		max.ifPresent(System.out::println);
 		
 		MethodReferencePractise methodReference = new MethodReferencePractise(); // Creating object
@@ -104,7 +104,7 @@ public class MethodReferencePractise {
 		
 		
 		/**
-		 *  Reference to constructor – Class::new
+		 *  Reference to constructor Class::new
 		 */
 		List<Integer> integersList = IntStream
                 .range(1, 100)
@@ -112,7 +112,7 @@ public class MethodReferencePractise {
                 .collect(Collectors.toCollection( ArrayList::new ));
  
 		Optional<Integer> maxInt = integersList.stream().reduce(Math::max); 
-		System.out.println("-- Reference to constructor – Class::new"); 
+		System.out.println("-- Reference to constructor Class::new"); 
 		maxInt.ifPresent(System.out::println); 
 		
 		Messageable hello = Message::new;  

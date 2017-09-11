@@ -1,7 +1,5 @@
 package com.arajit.code.practise.jdk8.optional;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -34,7 +32,7 @@ public class OptionalPractise {
 		System.out.println(canBeEmpty1.get());      // returns 5
 		 
 		/** Use Optional.ofNullable() to create an Optional object that may hold a null value. If parameter is null, the resulting Optional object would be empty
-		 * (remember that value is absent; don’t read it null).
+		 * (remember that value is absent; don't read it null).
 		 */
 		Optional<Integer> possible = Optional.ofNullable(null); 
 		System.out.println(possible.isPresent());
