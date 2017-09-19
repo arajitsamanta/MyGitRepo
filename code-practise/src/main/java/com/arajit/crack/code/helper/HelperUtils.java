@@ -6,7 +6,7 @@ package com.arajit.crack.code.helper;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.arajit.crack.code.linkedlist.Node;
+import com.arajit.crack.code.ch02.linkedlist.Node;
 
 /**
  * @author as47775
