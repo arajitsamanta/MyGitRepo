@@ -2,6 +2,8 @@ package com.arajit.code.practise.jdk8.optional;
 
 import java.util.Optional;
 
+
+
 /**
  * 
  * @author as47775
@@ -35,7 +37,7 @@ public class OptionalPractise {
 		 * (remember that value is absent; don't read it null).
 		 */
 		Optional<Integer> possible = Optional.ofNullable(null); 
-		System.out.println(possible.isPresent());
+		System.out.println("optional null::"+possible.isPresent());
 		
 		//or
 		Optional<Integer> possible2 = Optional.ofNullable(5);
@@ -83,6 +85,10 @@ public class OptionalPractise {
 				.ifPresent(x -> System.out.println(x.getPrice() + " is ok!"));
 		
 		 System.out.println("boolean:"+Boolean.valueOf(null));
+		 
+		 String ppo="abs";
+		 Optional<String> ostr = Optional.ofNullable(ppo).filter(org.apache.commons.lang3.StringUtils::isNotBlank);
+		 System.out.println("ostr:"+ostr.isPresent()); // prints false
 	}
 }
 
