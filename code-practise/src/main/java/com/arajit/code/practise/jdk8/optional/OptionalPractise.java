@@ -36,8 +36,10 @@ public class OptionalPractise {
 		/** Use Optional.ofNullable() to create an Optional object that may hold a null value. If parameter is null, the resulting Optional object would be empty
 		 * (remember that value is absent; don't read it null).
 		 */
-		Optional<Integer> possible = Optional.ofNullable(null); 
+		Optional<Integer> possible = Optional.ofNullable(Integer.valueOf(8)); 
 		System.out.println("optional null::"+possible.isPresent());
+		
+		System.out.println("Optional null with flatmap"+possible.flatMap( m -> Optional.of(m)));;
 		
 		//or
 		Optional<Integer> possible2 = Optional.ofNullable(5);
