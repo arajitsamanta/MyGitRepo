@@ -1,4 +1,4 @@
-package com.arajit.code.practise.util;
+package com.arajit.code.practise.encryption;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
